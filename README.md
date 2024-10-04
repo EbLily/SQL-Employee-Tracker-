@@ -69,6 +69,7 @@ Visual Studio Code
 2. Creating a lengthly content management systems(CMS).
 
 ## Link to the Walkthrough Video: 
+https://drive.google.com/file/d/1xgvFmklKdOXsXFaPtVNLBUSK2NMIbAxZ/view
 
 ## SQL Screenshots
 ![Screenshot of My website](./assets/View%20All%20Employees.PNG)

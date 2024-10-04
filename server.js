@@ -342,64 +342,13 @@ function addARole() {
   });
 }
 
+// Quit
+const quit = async () => {
+  await process.exit();
+};
+// Thank you for viewing!
+// Lily Ebadi 😊
 
-
-// function updateEmployeeRole() {
-//   const queryEmployees = "SELECT id, first_name, last_name FROM employee_list";
-//   const queryRoles = "SELECT * FROM role_list";
-
-//   pool.query(queryEmployees, async (err, resEmployees) => {
-//     if (err) throw err;
-    
-//     pool.query(queryRoles, async (err, resRoles) => {
-//       if (err) throw err;
-
-//       const { employee, role } = await inquirer.prompt([
-//         {
-//           type: "list",
-//           name: "employee",
-//           message: "Enter the ID of the employee you want to update:",
-//           choices: resEmployees.rows.map(
-//             (employee) => `${employee.first_name} ${employee.last_name}`
-//           ),
-//         },
-//         {
-//           type: "list",
-//           name: "role",
-//           message: "Select the new role for the employee:",
-//           choices: resRoles.rows.map((role) => role.title),
-//         },
-//       ]);
-
-//       // Find the selected employee and role
-//       const selectedEmployee = resEmployees.rows.find(
-//         (emp) => emp.id === parseInt(employee)
-//       );
-//       const selectedRole = resRoles.rows.find(
-//         (r) => r.title === role
-//       );
-
-//       if (!selectedEmployee || !selectedRole) {
-//         console.log("Invalid selection");
-//         return;
-//       }
-
-//       // Update the employee role
-//       const query = "UPDATE employee SET role_id = $1 WHERE id = $2";
-//       pool.query(
-//         query,
-//         [selectedRole.id, selectedEmployee.id],
-//         (err, res) => {
-//           if (err) throw err;
-//           console.log(
-//             `Updated ${selectedEmployee.first_name}${selectedEmployee.last_name}'s role to ${selectedRole.title} in the database!`
-//           );
-//           workTime();
-//         }
-//       );
-//     });
-//   });
-// }
 
   
     
